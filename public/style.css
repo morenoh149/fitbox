@@ -1,3 +1,14 @@
-h1 {
-  color: blue;
+/* #DBF82B
+ #AEF132
+ #7AC7CA
+ #7E9287
+ #969C93
+*/
+h1, h2 {
+  color: #7AC7CA;
+  text-align: center;
+}
+
+button {
+  margin: 0.5em
 }
