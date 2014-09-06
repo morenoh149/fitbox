@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('button').click(sendBeep);
+  $('button#test').click(sendBeep);
 });
 
 var sendBeep = function() {
