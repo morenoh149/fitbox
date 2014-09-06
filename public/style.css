@@ -4,11 +4,50 @@
  #7E9287
  #969C93
 */
+
 h1, h2 {
-  color: #7AC7CA;
+  color: #DBF82B;
   text-align: center;
 }
 
+body {
+  background-color: #969C93;
+}
+
 button {
-  margin: 0.5em
+  margin: 0.5em;
+  min-width: 8em;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button-success {
+  background: #AEF132;
+}
+.button-error {
+  background: rgb(202, 60, 60);
+}
+.button-warning {
+  background: rgb(223, 117, 20);
+}
+.button-secondary {
+  background: #7AC7CA;
+}
+
+#new-routine {
+  font-size: 1.5em;
+  text-align: center;
+  width: 90%;
+}
+
+#clock {
+  font-family: monospace;
+  font-size: 3em;
+  padding: 10px;
 }
