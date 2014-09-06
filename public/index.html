@@ -2,21 +2,14 @@
 <html>
   <head>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('button').click(sendBeep);
-      });
-
-      var sendBeep = function() {
-        $.get( "https://agent.electricimp.com/A1Rf-bQt0ws9?speaker=1", function( data ) {
-          $( ".result" ).html( data );
-          alert( "Load was performed." );
-        });
-      };
-    </script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    hello
+    <h1>FitBox</h1>
     <button>Beep that!</button>
   </body>
 </html>
