@@ -10,6 +10,8 @@ var countdown = 0;
 var index = 0;
 var roundsElapsed = 0;
 var interval;
+var intervalPaused = false;
+var everRan = false;
 var rest = false;
 
 var sendBeep = function() {
@@ -28,6 +30,7 @@ var sendDoublebeep = function() {
 var startBoxing = function() {
   countdown = boxingRoutine[index];
   interval = window.setInterval(updateClock, 100);
+  everRan = true;
   sendDoublebeep();
 };
 
@@ -64,10 +67,15 @@ var updateClock = function() {
 };
 
 var pauseRoutine = function() {
-  if (interval) {
-    clearInterval(interval);
-  } else {
+  console.log('pause button');
+  if (!everRan) {
+    return;
+  } else if (intervalPaused) {
+    intervalPaused = false;
     interval = window.setInterval(updateClock, 100);
+  } else {
+    clearInterval(interval);
+    intervalPaused = true;
   }
 };
 
@@ -75,6 +83,8 @@ var cancelRoutine = function() {
   countdown = 0;
   index = 0;
   roundsElapsed = 0;
+  everRan = false;
+  intervalPuased = false;
   clearInterval(interval);
   $('#minutes').text("00");
   $('#seconds').text("00");
