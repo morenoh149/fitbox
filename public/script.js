@@ -2,6 +2,7 @@ $(document).ready(function() {
   $('button#test').click(sendBeep);
   $('button#boxing').click(startBoxing);
   $('button#stop').click(cancelRoutine);
+  $('button#pause').click(pauseRoutine);
 });
 
 // seconds displayed on clock
@@ -54,8 +55,19 @@ var updateClock = function() {
   }
 };
 
+// var pauseRoutine = function() {
+//   if (interval) {
+//     clearInterval(interval);
+//   } else {
+
+
 var cancelRoutine = function() {
-  //
+  countdown = 0;
+  index = 0;
+  roundsElapsed = 0;
+  clearInterval(interval);
+  $('#minutes').text("00");
+  $('#seconds').text("00");
 };
 
 var zeroFill = function(num) {
